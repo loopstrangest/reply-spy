@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <title>Reply Spy</title>
+  </head>
+  <body>
+    <div class="hiddenContainer">
+      <form id="hiddenForm" method="post" action='/results'>
+         <input type="hidden"
+         id="hiddenInput"
+         name="user"
+         placeholder="whomst"
+         value=<%- user %>
+         maxlength=16>
+      </form>
+    </div>
+    <p class="loadingBox">loading results for <strong>@<%- user %>...</strong></p>
+    <script>
+      document.getElementById("hiddenForm").submit();
+    </script>
+  </body>
+</html>

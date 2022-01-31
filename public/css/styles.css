@@ -1,0 +1,138 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+html,
+body {
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.container:nth-child(2) {
+  margin: auto 10% auto 10%;
+}
+
+.hiddenContainer {
+  visibility: none;
+}
+
+h1 {
+  font-size: calc(1.375rem + 1.5vw);
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+p {
+  margin-top: 0;
+}
+
+form {
+  width: 100%;
+}
+
+.inputGroup,
+.inputBox {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  width: 100%;
+}
+
+.inputGroup {
+  flex-direction: column;
+}
+
+.inputPrepend {
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: center;
+  white-space: nowrap;
+  background-color: #e9ecef;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+input {
+  position: relative;
+  flex: 1 1 auto;
+  width: 1%;
+  min-width: 0;
+  display: block;
+  padding: 0.375rem 0rem 0.375rem 0.5rem;
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: left;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  appearance: none;
+  border-radius: 0.25rem;
+  border-top-left-radius: 0rem;
+  border-bottom-left-radius: 0rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.invalid,
+.invalid:focus {
+  border: 1px solid red;
+}
+.invalid:focus {
+  outline: none !important;
+  box-shadow: 0 0 10px red;
+}
+
+.invalidMessage {
+  margin: auto;
+  margin-top: 0.25rem;
+  color: red;
+  font-size: 0.8em;
+}
+
+button {
+  margin-top: 1rem;
+}
+
+.loadingBox,
+.errorBox {
+  margin: auto !important;
+  background-color: lightskyblue;
+  padding: 5px 10px 5px 10px;
+  border-radius: 5px;
+  border: 1px solid deepskyblue;
+}
+
+.errorBox {
+  background-color: lightcoral;
+  border: 1px solid crimson;
+}
+
+.errorText {
+  line-height: 1;
+}

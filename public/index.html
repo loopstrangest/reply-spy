@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <title>Reply Spy</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Reply Spy</h1>
+      <p>Check out your top twitter reply guys</p>
+      <form method="post">
+          <div class="inputGroup">
+            <div class="inputBox">
+              <span class="inputPrepend">@</span>
+              <input type="text" id="userInput" name="user"
+              placeholder="whomst" value=""
+              maxlength=16 spellcheck="false">      
+            </div>                    
+          </div>
+       
+        <button type="submit">Generate
+        </button></form>
+    </div>
+    <div class="container">
+      <p>Reply Spy uses <strong>publicly available</strong> twitter data to find recent replies.</p>
+      <p>It <strong>can't see private (locked) accounts,</strong> so those accounts
+        can't be submitted and they won't appear in the results.</p>
+      <p>It uses the <a href="https://konvajs.org/" target=_blank>konva library</a> and
+        <a href="https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api" target=_blank>
+          Twitter's API.</a></p>
+      <p>Reply Spy was created by
+        <a href="https://twitter.com/strangestloop" target=_blank>@strangestloop</a>
+        who would love to
+        <a href="https://strangestloop.io/#portfolio" target=_blank>do
+        stuff for you.</a>
+      </p>
+      </p>
+    </div>
+    <script type="text/javascript" src="js/userWarning.js"></script>  
+  </body>
+</html>
