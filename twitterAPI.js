@@ -35,12 +35,12 @@ async function fetchTwitterData(inputUser) {
       "400x400"
     );
     const repliesToUser = await client.v2.userMentionTimeline(userID, {
-      max_results: 10,
+      max_results: 100,
       expansions: ["author_id"],
     });
 
     //use pagination to get more replies
-    for (i = 1; i <= 1; i++) {
+    for (i = 2; i <= 10; i++) {
       await repliesToUser.fetchNext();
     }
 

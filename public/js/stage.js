@@ -1,5 +1,5 @@
-var width = 500;
-var height = 500;
+var width = 1000;
+var height = 1000;
 
 var inputUser = twitterData[0];
 var inputUserProfilePic = twitterData[1];
@@ -46,14 +46,14 @@ function drawText() {
     align: "left",
     verticalAlign: "bottom",
     fill: "black",
-    fontSize: 24,
+    fontSize: 36,
     fontStyle: "bold",
     stroke: "white",
-    strokeWidth: 0.25,
+    strokeWidth: 1,
     height: textHeight,
-    x: 0,
-    y: height - textHeight,
-    offset: { x: -5, y: 2 },
+    x: 5,
+    y: height - textHeight - 2,
+    //offset: { x: -5, y: 2 },
   });
   layer.add(konvaText);
 }
@@ -118,6 +118,7 @@ function konvaDraw() {
     var radius = dimension / 2;
     var url = replierProfilePics[i];
     var imageObject = new Image();
+    imageObject.crossOrigin = "Anonymous";
     imageObject.src = url;
     var xResize = dimension / imageObject.naturalWidth;
     var yResize = dimension / imageObject.naturalHeight;
@@ -160,9 +161,10 @@ function konvaDraw() {
   }
 
   //create and store user
-  var inputDimension = 200 - (75 / 23) * (input - 1);
+  var inputDimension = (width * 2) / 5 - 6 * (input - 1);
   var inputRadius = inputDimension / 2;
   var imageObject = new Image();
+  imageObject.crossOrigin = "Anonymous";
   imageObject.src = inputUserProfilePic;
   var xResize = inputDimension / imageObject.naturalWidth;
   var yResize = inputDimension / imageObject.naturalHeight;
