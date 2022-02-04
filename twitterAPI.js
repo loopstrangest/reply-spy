@@ -35,7 +35,7 @@ async function fetchTwitterData(inputUser) {
       "400x400"
     );
     const repliesToUser = await client.v2.userMentionTimeline(userID, {
-      max_results: 100,
+      max_results: 10,
       expansions: ["author_id"],
     });
 
