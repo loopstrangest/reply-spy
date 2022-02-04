@@ -7,39 +7,39 @@
     <title>Reply Spy</title>
   </head>
   <body>
-      <div class="resultsContainer">
-        
-          <div id='displayContainer'>
-            <div class="buttonContainer">
-              <button id="homeButton">Go To Homepage</button>
-              <button id="downloadButton">Save Image</button>
-            </div>
-            <div id="results-wrapper">
-              <div id="konvaContainer"></div>
-            </div>
-              <div id="inputContainer">
-                <div id="rangeContainer">
-                  <label for="resultsRange">Results:&nbsp;</label>
-                  <input label='resultsRange' type="range" min="1"
-                  max=<%-String(results[2])%>
-                  value=<%-String(results[2])%> id='input'>
-                </div>
-                <div id="stairsContainer">
-                  <label for="stairsInput">Stairs:&nbsp;</label>
-                  <input type="color" label='stairsInput' value='#BBEAFF' id='stairsInput'>
-                </div>
-                <div id="bgContainer">
-                  <label for="bgInput">Background:&nbsp;</label>
-                  <input type="color" label = 'Background:' value='#1DA1F2' id='bgInput'>
-                </div>
-            </div>
-          
+    <div id='displayContainer'>
+      <div class="buttonContainer">
+        <button id="homeButton">Go To Homepage</button>
+        <button id="downloadButton">Save Image</button>
+      </div>
+      <div id="results-wrapper">
+        <div id="konvaContainer"></div>
+      </div>
+      <div id="inputContainer">
+        <div id="rangeContainer">
+          <label for="resultsRange">Results:&nbsp;</label>
+          <input label='resultsRange' type="range" min="1"
+          max=<%-String(results[2])%>
+          value=<%-String(results[2])%> id='input'>
+        </div>
+        <div id="stairsContainer">
+          <label for="stairsInput">Stairs:&nbsp;</label>
+          <input type="color" label='stairsInput' value='#BBEAFF' id='stairsInput'>
+        </div>
+        <div id="bgContainer">
+          <label for="bgInput">Background:&nbsp;</label>
+          <input type="color" label = 'Background:' value='#1DA1F2' id='bgInput'>
         </div>
       </div>
+      <div id="handlesContainer">
+        <div class="staircase1"></div>
+      </div>
+    </div>
     <script type="text/javascript">
       var twitterData = <%- JSON.stringify(results) %>
     </script>
     <script type="text/javascript" src="js/stage.js"></script>
+    <script type="text/javascript" src="js/displayHandles.js"></script>
     <script type="text/javascript" src="js/buttonActions.js"></script>
   </body>
 </html>

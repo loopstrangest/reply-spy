@@ -96,9 +96,18 @@ canvas {
   margin-bottom: 0.5rem;
 }
 
+#handlesContainer {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  justify-content: space-around;
+}
+
 @media screen and (max-width: 500px) {
   #inputContainer {
     flex-direction: column;
+    width: min-content;
+    margin: auto;
   }
   #inputContainer > * {
     margin-right: auto;
